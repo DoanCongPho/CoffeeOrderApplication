@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_margin="8dp">
+
+    <!-- Background: red with delete icon -->
+    <LinearLayout
+        android:id="@+id/deleteBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="end|center_vertical"
+        android:paddingEnd="24dp"
+        >
+
+        <ImageView
+            android:id="@+id/deleteIcon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_delete"
+            android:contentDescription="Delete Icon" />
+    </LinearLayout>
+
+    <!-- Foreground cart card -->
+    <LinearLayout
+        android:id="@+id/itemForeground"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="@drawable/cart_item_bg"
+        android:elevation="4dp"
+        android:gravity="center_vertical">
+
+        <!-- Coffee image -->
+        <ImageView
+            android:id="@+id/coffeeImage"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginEnd="12dp"
+            android:scaleType="fitCenter"
+             android:src="@drawable/ic_cup"
+            />
+
+        <!-- Info block -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/coffeeName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/coffeeDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#888"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <!-- Price -->
+        <TextView
+            android:id="@+id/coffeePrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$3.00"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+</FrameLayout>

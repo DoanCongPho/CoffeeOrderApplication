@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="16dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:gravity="center_horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/backIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_back"
+                android:contentDescription="Back" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/unityApp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_3d"
+                android:scaleType="fitCenter"
+                android:background="?android:selectableItemBackgroundBorderless"
+                />
+
+            <ImageButton
+                android:id="@+id/myCart"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_cart"
+                android:scaleType="fitCenter"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:contentDescription="Cart" />
+        </LinearLayout>
+
+        <!-- Coffee Image -->
+        <ImageView
+            android:id="@+id/coffeeImage"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="12dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_americano" />
+
+        <!-- Name and Quantity -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/coffeeName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Americano"
+                android:textSize="18sp"
+                android:textColor="#000000" />
+
+            <!-- Quantity selector -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/decreaseQty"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:text="-"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:padding="0dp"
+                    android:backgroundTint="#DDDDDD"
+                    android:textColor="#000000"
+                    android:contentDescription="Decrease" />
+
+
+                <TextView
+                    android:id="@+id/quantityText"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textSize="16sp"
+                    android:textColor="#000000" />
+
+                <Button
+                    android:id="@+id/increaseQty"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:text="+"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:padding="0dp"
+                    android:textStyle="bold"
+                    android:minWidth="48dp"
+                    android:minHeight="48dp"
+                    android:backgroundTint="#DDDDDD"
+                    android:textColor="#000000"
+                    android:contentDescription="Increase" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <!-- Shot Options -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="20dp">
+
+            <!-- Label on the left -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shot"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginEnd="16dp" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+            <!-- Toggle Buttons -->
+            <ToggleButton
+                android:id="@+id/singleShot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_background"
+                android:textOn="Single"
+
+                android:textOff="Single" />
+
+            <ToggleButton
+                android:id="@+id/doubleShot"
+                android:layout_width="wrap_content"
+                android:background="@drawable/round_edge_bg"
+                android:layout_height="wrap_content"
+                android:textOn="Double"
+                android:textOff="Double" />
+        </LinearLayout>
+
+
+
+        <!-- Type (Hot/Iced) -->
+        <!-- Select Type (Hot/Iced) -->
+        <LinearLayout
+            android:id="@+id/selectGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:gravity="bottom"
+           >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_marginEnd="8dp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/hotType"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_hot"
+                android:scaleType="fitCenter"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:contentDescription="Hot" />
+
+            <ImageButton
+                android:id="@+id/icedType"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_iced"
+                android:scaleType="fitCenter"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:contentDescription="Iced" />
+        </LinearLayout>
+
+
+        <!-- Size Options -->
+        <!-- Size Options -->
+        <LinearLayout
+            android:id="@+id/sizeGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:gravity="bottom"
+           >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Size"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_marginEnd="8dp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <!-- Size S -->
+            <FrameLayout
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="bottom"
+                android:layout_marginEnd="8dp">
+
+                <ImageButton
+                    android:id="@+id/sizeS"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_cup"
+                    android:scaleType="fitCenter"
+                    android:background="?android:selectableItemBackgroundBorderless"
+                    android:contentDescription="Size S" />
+            </FrameLayout>
+
+            <!-- Size M -->
+            <FrameLayout
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="8dp">
+
+                <ImageButton
+                    android:id="@+id/sizeM"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_cup"
+                    android:scaleType="fitCenter"
+                    android:background="?android:selectableItemBackgroundBorderless"
+                    android:contentDescription="Size M" />
+            </FrameLayout>
+
+            <!-- Size L -->
+            <FrameLayout
+                android:layout_width="48dp"
+                android:layout_height="48dp">
+
+                <ImageButton
+                    android:id="@+id/sizeL"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_cup"
+                    android:scaleType="fitCenter"
+                    android:background="?android:selectableItemBackgroundBorderless"
+                    android:contentDescription="Size L" />
+            </FrameLayout>
+        </LinearLayout>
+
+
+
+        <!-- Ice Level -->
+        <!-- Ice Level: Label + Buttons on the same line -->
+        <LinearLayout
+            android:id="@+id/iceGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:gravity="bottom"
+           >
+
+            <!-- Ice Label -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ice"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_marginEnd="16dp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <!-- Ice Buttons -->
+            <ImageButton
+                android:id="@+id/ice1"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_ice_1"
+                android:scaleType="fitCenter"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:contentDescription="Less ice" />
+
+            <ImageButton
+                android:id="@+id/ice2"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_ice_2"
+                android:scaleType="fitCenter"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:contentDescription="Normal ice" />
+
+            <ImageButton
+                android:id="@+id/ice3"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_ice_3"
+                android:scaleType="fitCenter"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:contentDescription="Extra ice" />
+        </LinearLayout>
+
+
+        <!-- Price + Button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="24dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Amount"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/totalPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$3.00"
+                android:textSize="16sp"
+                android:layout_marginLeft="11dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/addToCartButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add to cart"
+            android:layout_marginTop="12dp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#2F3C4E" />
+
+    </LinearLayout>
+</ScrollView>

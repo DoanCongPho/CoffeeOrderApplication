@@ -1,0 +1,26 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    android:background="@drawable/round_edge_bg"
+    android:layout_margin="8dp">
+
+    <ImageView
+        android:id="@+id/coffeeImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_americano" />
+
+    <TextView
+        android:id="@+id/coffeeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Americano"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:layout_marginTop="8dp"
+        android:textColor="#000000" />
+</LinearLayout>

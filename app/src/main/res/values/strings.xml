@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CoffeeOrdering</string>
+    <string name="my_coffee_order_app">My coffee order app</string>
+    <string name="register">Register</string>
+    <string name="sign_in">Sign In</string>
+    <string name="order_your_coffee_in_a_few_taps">Order your coffee in a few taps!</string>
+    <string name="password">Password</string>
+</resources>

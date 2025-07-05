@@ -1,0 +1,8 @@
+<!-- res/drawable/delete_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <solid android:color="#F4F6FC
+" /> <!-- light red background -->
+    <corners android:radius="32dp" />
+</shape>
